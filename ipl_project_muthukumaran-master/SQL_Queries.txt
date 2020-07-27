@@ -1,0 +1,5 @@
+SELECT season, COUNT(*) as matches_played FROM  mountblue.dataset group by season order by season;
+SELECT winner, COUNT(*) as matches_won FROM  mountblue.dataset group by winner order by winner;
+select winner, sum(win_by_runs) from mountblue.dataset where season=2016 group by winner; 
+select bowler as Bowler, sum(total_runs)*1.0/(count(*)/6 + (count(*)/10.0)) as BowlerEconomy from mountblue.delivery where match_id > 0 and match_id < 60  group by bowler; 
+
